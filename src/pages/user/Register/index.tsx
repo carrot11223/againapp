@@ -64,6 +64,7 @@ const Register: React.FC = () => {
           logo={<img alt="logo" src={SYSTEM_LOGO} />}
           title="胡萝卜社区用户管理平台"
           subTitle={'世界上最好的胡萝卜发烧友都在这里'}
+
           /*initialValues={{
             autoLogin: true,
           }}*/

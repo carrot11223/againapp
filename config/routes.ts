@@ -20,21 +20,22 @@
   },
   {
     path: '/welcome',
-    name: 'welcome',
+    name: '欢迎',
     icon: 'smile',
     component: './Welcome',
   },
   {
-    path: '/admin',
-    name: 'admin',
+    path: '/Admin',
+    name: '管理页',
     icon: 'crown',
     access: 'canAdmin',
+    component: './Admin',//补上去的
     routes: [
       {
-        path: '/admin/sub-page',
-        name: 'sub-page',
+        path: '/admin/user-manage',
+        name: '用户管理',
         icon: 'smile',
-        component: './Welcome',
+        component: './Admin/UserManager',
       },
       {
         component: './404',
@@ -42,7 +43,7 @@
     ],
   },
   {
-    name: 'list.table-list',
+    name: '查询表格',
     icon: 'table',
     path: '/list',
     component: './TableList',
