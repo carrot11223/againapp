@@ -47,6 +47,13 @@ export async function getNotices(options?: { [key: string]: any }) {
   });
 }
 
+export async function searchUsers(options?: { [key: string]: any }) {
+  return request<API.CurrentUser[]>('/api/user/search', {
+    method: 'GET',
+    ...(options || {}),
+  });
+}
+
 /** 获取规则列表 GET /api/rule */
 export async function rule(
   params: {
