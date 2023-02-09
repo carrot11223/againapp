@@ -13,6 +13,7 @@ declare namespace API {
     userStatus: number;
     role: number;
     createTime: Date;
+    planetCode: string;
   };
 
   type LoginResult = {

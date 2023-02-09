@@ -150,6 +150,8 @@ const Login: React.FC = () => {
             </a>
           </div>
         </LoginForm>
+
+
       </div>
       <Footer />
     </div>

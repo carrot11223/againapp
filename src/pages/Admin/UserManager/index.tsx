@@ -39,13 +39,12 @@ const columns: ProColumns<API.CurrentUser>[] = [
   {
     title: '电话',
     dataIndex: 'phone',
-    copyable: true,
     width: 60,
   },
   {
     title: '邮箱',
     dataIndex: 'email',
-    copyable: true,
+
     width: 60,
   },
   {
@@ -60,6 +59,11 @@ const columns: ProColumns<API.CurrentUser>[] = [
         status: 'Success',
       },
     },
+  },
+  {
+    title: '星球编号',
+    dataIndex: 'planetCode',
+    width: 60,
   },
   {
     title: '用户状态',
