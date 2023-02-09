@@ -32,7 +32,7 @@ export async function login(body: API.LoginParams, options?: { [key: string]: an
 }
 
 export async function register(body: API.RegisterParams, options?: { [key: string]: any }) {
-  return request<API.RegisterResult>('/api/user/login', {
+  return request<API.RegisterResult>('/api/user/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

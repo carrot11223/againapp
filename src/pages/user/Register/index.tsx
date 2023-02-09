@@ -21,7 +21,7 @@ const Register: React.FC = () => {
 
   const handleSubmit = async (values: API.RegisterParams) => {
     const {userPassword,checkPassword }  = values;
-     if (userPassword !== checkPassword){
+    if (userPassword !== checkPassword){
        message.error('两次输入的密码不一致');
        return;
      }
