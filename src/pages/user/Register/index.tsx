@@ -27,8 +27,9 @@ const Register: React.FC = () => {
      }
     try {
       // 注册
+      //拦截器最后返回的就是一个code，状态码，如果code=0，说明成功
       const id = await register(values);
-      if (id > 0) {
+      if (id) {
         const defaultLoginSuccessMessage = '注册成功！';
         message.success(defaultLoginSuccessMessage);
 
@@ -40,15 +41,14 @@ const Register: React.FC = () => {
           query,
         });
         return;
-      }else {
-        throw new Error(`register error,id = ${id}`);
       }
       //console.log(msg);
       // 如果失败去设置用户错误信息
       //setUserLoginState(id);
-    } catch (error) {
+    } catch (error: any) {
       const defaultLoginFailureMessage = '注册失败，请重试！';
-      message.error(defaultLoginFailureMessage);
+      //如果失败了，就将错误信息放到页面上，页面的提示就会是res.description
+      message.error( defaultLoginFailureMessage);
     }
   };
 

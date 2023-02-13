@@ -30,6 +30,8 @@ export async function getInitialState(): Promise<{
 }> {
   const fetchUserInfo = async () => {
     try {
+     //alert(process.env.NODE_ENV)
+
       return await queryCurrentUser();
     } catch (error) {
       alert("出错了....");

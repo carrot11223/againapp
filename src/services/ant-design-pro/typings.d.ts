@@ -63,10 +63,21 @@ declare namespace API {
     autoLogin?: boolean;
     type?: string;
   };
+  /**
+   * 返回通用返回对象
+   */
+  type BaseResponse<T>= {
+   code?: number;
+   data?: T;
+   message?: string;
+   description?: string;
+
+  };
   type RegisterParams = {
     userAccount?: string;
     userPassword?: string;
     checkPassword?: string;
+    planetCode?: string;
     autoLogin?: boolean;
     type?: string;
   };
