@@ -7,6 +7,7 @@ import {history, Link} from 'umi';
 import defaultSettings from '../config/defaultSettings';
 import {currentUser as queryCurrentUser} from './services/ant-design-pro/api';
 import {RunTimeLayoutConfig} from "@@/plugin-layout/layoutExports";
+import {RequestConfig} from "@@/plugin-request/request";
 
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -30,7 +31,7 @@ export async function getInitialState(): Promise<{
 }> {
   const fetchUserInfo = async () => {
     try {
-     //alert(process.env.NODE_ENV)
+   // alert(process.env.NODE_ENV)
 
       return await queryCurrentUser();
     } catch (error) {
@@ -57,7 +58,10 @@ export async function getInitialState(): Promise<{
     settings: defaultSettings,
   };
 }
-
+/*export const request: RequestConfig={
+  timeout: 1000,
+  prefix: "http://main.carrot-usercenter.asia:8000"
+}*/
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
 export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
   return {
